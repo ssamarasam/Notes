@@ -1,0 +1,22 @@
+Front-end:
+1. Html
+2. Css
+3. JavaScript
+4. React Js
+5. Bootstrap
+6. Redux
+
+
+Back-end:
+1. Node Js
+2. Express
+3. MongoDB
+
+
+Others:
+1. TypeScript
+2. GIT
+3. Linux commands
+
+4. Figma
+5. Chakra UI
