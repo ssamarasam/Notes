@@ -6,3 +6,25 @@ npm i react-hook-form@7.43
 
 // Zod validation library to use with react-hook-form
 npm i zod@3.20.6
+import { z } from 'zod';
+
+const schema = z.object({
+	name: z.string().min(3, {message: "Name must be atleast 3 characters"}),
+	age: z.number({invalid_type_error: "Age field is required"}).min(18, {message: "Age must be atleast 18})
+
+})
+
+type FormData = z.infer<typeof schema>;
+	
+integrate zod with react hook form
+npm i @hookform/resolvers@2.9.11
+above contains resolvers for various schema based validations
+import { zodResolver } from '@hookform/resolvers/zod';
+
+
+useForm<FormData>({resolver: zodResolver(schema)});
+
+---
+...register('age', {valueAsNumber: true})
+
+
